@@ -16,7 +16,9 @@ npm start
 ```
 
 ### Run the tests
+```
 npm test
+```
 
 #APIs
 Api examples below
