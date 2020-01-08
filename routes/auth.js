@@ -1,4 +1,3 @@
-/* global require, module */
 const jwt = require('express-jwt')
 
 const getTokenFromHeaders = (req) => {

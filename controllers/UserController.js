@@ -46,7 +46,7 @@ exports.login = (req, res, next) => {
 
 	return passport.authenticate('local', {
 		session: false
-	}, (err, passportUser, info) => {
+	}, (err, passportUser) => {
 		if (err) {
 			return next(err)
 		}
@@ -63,10 +63,6 @@ exports.login = (req, res, next) => {
 				message: 'Incorrect email or password'
 			}, 400))
 		}
-
-		return next(new CustomError('UnknownError', 'unknown_error', {
-			message: 'Unknown error'
-		}, 520))
 	})(req, res, next)
 }
 

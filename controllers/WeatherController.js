@@ -1,12 +1,10 @@
 const mongoose = require('mongoose')
-const passport = require('passport')
 const Weathers = mongoose.model('Weathers')
 
-const CustomError = require('../errors/CustomError')
 const config = require('../config/openweathermap')
 const rp = require('request-promise')
 
-exports.get_weather = async (req, res, next) => {
+exports.get_weather = async (req, res) => {
 	rp(config)
 		.then(async (repos) => {
 			let insertData = {
@@ -25,7 +23,7 @@ exports.get_weather = async (req, res, next) => {
 			}
 			return res.json(repos)
 		})
-		.catch(async (err) => {
+		.catch(async () => {
 			// for case that cannot connect to openweathermap
 			let weatherData = await Weathers.findOne()
 			let repos = JSON.parse(weatherData.data)
