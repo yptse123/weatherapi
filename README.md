@@ -20,18 +20,18 @@ npm start
 npm test
 ```
 
-#APIs
+# APIs
 Api examples below
 
-##Create user
+## Create user
 
-###Request
+### Request
 `POST /api/users/`
 ```
 curl -i -d 'email=xxx&password=xxx' http://localhost:8000/api/users/
 ```
 
-###Response
+### Response
 ```
 access-control-allow-origin →*
 connection →keep-alive
@@ -50,15 +50,15 @@ x-powered-by →Express
 }
 ```
 
-##Login
+## Login
 
-###Request
+### Request
 `POST /api/users/login/`
 ```
 curl -i -d 'email=xxx&password=xxx' http://localhost:8000/api/users/login/
 ```
 
-###Response
+### Response
 ```
 access-control-allow-origin →*
 connection →keep-alive
@@ -77,15 +77,15 @@ x-powered-by →Express
 }
 ```
 
-##Get weather
+## Get weather
 
-###Request
+### Request
 `GET /api/weathers/`
 ```
 curl -i -H 'Authorization: Token xxxxxxxxxxx' http://localhost:8000/api/weathers/
 ```
 
-###Response
+### Response
 ```
 access-control-allow-origin →*
 connection →keep-alive
