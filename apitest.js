@@ -1,3 +1,4 @@
+/* global describe, it */
 let chai = require('chai')
 let chaiHttp = require('chai-http')
 let expect = require('chai').expect;

@@ -55,7 +55,7 @@ require('./config/passport')
 app.use(require('./routes'))
 
 //Error handlers & middlewares
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
 	res.status(err.status || 500)
 
 	res.json({
