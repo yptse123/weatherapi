@@ -1,7 +1,7 @@
 # Weather Api
 Get Hong Kong's weather from openweathermap and store in database. If the openweathermap is down, query data from database 
 
-##Getting Started
+## Getting Started
 Introduce how to run the apis
 
 ### Installing
